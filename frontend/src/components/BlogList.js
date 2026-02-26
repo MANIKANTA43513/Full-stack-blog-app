@@ -7,7 +7,7 @@ const [blogs,setBlogs]=useState([]);
 const nav=useNavigate();
 
 useEffect(()=>{
-axios.get('http://localhost:5000/api/blogs').then(res=>setBlogs(res.data));
+axios.get("https://full-stack-blog-app-e02q.onrender.com/api/blogs").then(res=>setBlogs(res.data));
 },[]);
 
 return(

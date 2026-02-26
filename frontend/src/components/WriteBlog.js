@@ -12,7 +12,7 @@ const [suggestions,setSuggestions]=useState([]);
 
 useEffect(()=>{
 if(id){
-axios.get(`http://localhost:5000/api/blogs/${id}`)
+axios.getaxios.get(`https://full-stack-blog-app-e02q.onrender.com/api/blogs/${id}`)
 .then(res=>{
 setTitle(res.data.title);
 setAuthor(res.data.author);
@@ -23,15 +23,15 @@ setContent(res.data.content);
 
 const save=async()=>{
 if(id){
-await axios.put(`http://localhost:5000/api/blogs/${id}`,{title,author,content});
+await axios.put(`https://full-stack-blog-app-e02q.onrender.com/api/blogs/${id}`,{title,author,content});
 }else{
-await axios.post('http://localhost:5000/api/blogs',{title,author,content});
+await axios.post(`https://full-stack-blog-app-e02q.onrender.com/api/blogs`,{title,author,content});
 }
 nav('/');
 };
 
 const generate=async()=>{
-const res=await axios.post('http://localhost:5000/api/ai-suggestions',{title,content});
+const res=await axios.post("https://full-stack-blog-app-e02q.onrender.com/api/ai-suggestions",{title,content});
 setSuggestions(res.data.suggestions);
 };
 

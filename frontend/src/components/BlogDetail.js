@@ -8,11 +8,11 @@ const nav=useNavigate();
 const [blog,setBlog]=useState(null);
 
 useEffect(()=>{
-axios.get(`http://localhost:5000/api/blogs/${id}`).then(res=>setBlog(res.data));
+axios.get(`https://full-stack-blog-app-e02q.onrender.com/api/blogs/${id}`).then(res=>setBlog(res.data));
 },[id]);
 
 const deletePost=async()=>{
-await axios.delete(`http://localhost:5000/api/blogs/${id}`);
+await axios.delete(`https://full-stack-blog-app-e02q.onrender.com/api/blogs/${id}`)
 nav('/');
 };
 
