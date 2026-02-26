@@ -1,0 +1,6 @@
+body{background:#F8F6F3;font-family:Inter;margin:0;color:#2B2B2B}
+.container{width:720px;margin:90px auto}
+h1{font-family:Merriweather;font-size:36px}
+.blog-title{font-family:Merriweather;color:#E4572E;cursor:pointer}
+input,textarea{width:100%;padding:10px;margin-bottom:15px;border:1px solid #E5E7EB;border-radius:6px}
+button{background:#E4572E;color:white;border:none;padding:8px 18px;border-radius:6px;cursor:pointer}
